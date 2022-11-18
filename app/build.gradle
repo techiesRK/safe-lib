@@ -61,6 +61,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
     implementation project(path: ':safelib')
+    //implementation 'com.github.RkTechies:safe-lib:1.0.1'
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'

@@ -4,6 +4,36 @@ public class Vehicle {
     private String mDeviceId;
     private int mId;
     private String LockFlag;
+
+
+    private String lockId;
+    private String deviceCode;
+    private String lockCode;
+
+    public String getLockId() {
+        return lockId;
+    }
+
+    public void setLockId(String lockId) {
+        this.lockId = lockId;
+    }
+
+    public String getDeviceCode() {
+        return deviceCode;
+    }
+
+    public void setDeviceCode(String deviceCode) {
+        this.deviceCode = deviceCode;
+    }
+
+    public String getLockCode() {
+        return lockCode;
+    }
+
+    public void setLockCode(String lockCode) {
+        this.lockCode = lockCode;
+    }
+
     public String getmVehicleNumber() {
         return mVehicleNumber;
     }
