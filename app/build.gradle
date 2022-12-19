@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
 
-    compileSdkVersion 31
+    compileSdkVersion 32
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId "com.dhanuka.safeobuddy.demo"
         minSdkVersion 23 //change back to 19
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode 116
         versionName "2.16"
         multiDexEnabled true
