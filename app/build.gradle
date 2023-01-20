@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
 
-    compileSdkVersion 32
+    compileSdkVersion 31
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId "com.codersworld.qr.scanner"
         minSdkVersion 23 //change back to 19
-        targetSdkVersion 32
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0.1"
         multiDexEnabled true

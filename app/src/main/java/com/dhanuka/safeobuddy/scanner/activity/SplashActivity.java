@@ -10,9 +10,9 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.codersworld.rklib.scanner.ScanActivity;
+/*import com.codersworld.rklib.scanner.ScanActivity;
 import com.codersworld.rklib.utils.AppUrls;
-import com.codersworld.rklib.utils.CommonMethods;
+import com.codersworld.rklib.utils.CommonMethods;*/
 import com.dhanuka.safeobuddy.R;
 
 
@@ -23,13 +23,13 @@ TextView txtResult;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         txtResult = findViewById(R.id.txtResult);
-        startActivityForResult(new Intent(this, ScanActivity.class).putExtra("open_scanner", true), 102);
+        //startActivityForResult(new Intent(this, ScanActivity.class).putExtra("open_scanner", true), 102);
         // CommonMethods.successToast(this, AppUrls.GET_UOM_ITEM);
     }
 
     public void onScan(View mView) {
         txtResult.setText("Result will be here...");
-        startActivityForResult(new Intent(this, ScanActivity.class).putExtra("open_scanner", true), 102);
+       // startActivityForResult(new Intent(this, ScanActivity.class).putExtra("open_scanner", true), 102);
     }
 
     @Override
