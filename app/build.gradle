@@ -8,11 +8,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     defaultConfig {
-        applicationId "com.dhanuka.safeobuddy.demo"
+        applicationId "com.codersworld.qr.scanner"
         minSdkVersion 23 //change back to 19
         targetSdkVersion 32
-        versionCode 116
-        versionName "2.16"
+        versionCode 1
+        versionName "1.0.1"
         multiDexEnabled true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }

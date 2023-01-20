@@ -48,11 +48,14 @@ class ScanActivity : AppCompatActivity() {
             ex.printStackTrace()
             Log.e("resultqwe", result.toString())
         }
-        val text = when (result) {
+        var text = when (result) {
             is QRSuccess -> result.content.rawValue
             QRUserCanceled -> "User canceled"
             QRMissingPermission -> "Missing permission"
             is QRError -> "${result.exception.javaClass.simpleName}: ${result.exception.localizedMessage}"
+        }
+        if(text.equals("User canceled",true) || text.equals("Missing permission",true) ){
+            text="";
         }
         Log.e("mIntent", text.toString())
         var mIntent: Intent = Intent();
