@@ -1,4 +1,4 @@
-package com.dhanuka.safeobuddy.customDetail.model
+package com.codersworld.rklib.beans.meter
 
 
 import com.google.gson.annotations.SerializedName

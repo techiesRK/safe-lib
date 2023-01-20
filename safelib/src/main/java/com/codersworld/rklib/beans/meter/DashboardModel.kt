@@ -1,4 +1,4 @@
-package com.dhanuka.safeobuddy.customDetail.model
+package com.codersworld.rklib.beans.meter
 
 class DashboardModel(title: String?, price: String?, date: String?) {
         private var title: String
