@@ -37,6 +37,11 @@ data class MeterRechargeDetail(
         @SerializedName("txndate")
         val txndate: String,
         @SerializedName("currency")
-        val currency: String
+        val currency: String,
+        @SerializedName("paytmres")
+        val paytmres: String,
+        @SerializedName("paytmstatus")
+        val paytmstatus: String
+
     )
 }
