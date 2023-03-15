@@ -10,6 +10,8 @@ data class MeterlatesthistoryData(
     var returnmessage: List<Returnmessage>
 ) {
     data class Returnmessage(
+        @SerializedName("meterstatus")
+        var meterstatus: String,
         @SerializedName("UnitName")
         var unitName: String,
         @SerializedName("currentbalance")
