@@ -16,8 +16,8 @@ public class VehicalBean implements Serializable {
     String strColorT;
     @SerializedName("status")
     private String strstatus;
-    @SerializedName("isBackupexist ")
-    private String isBackupexist ;
+    @SerializedName("isBackupexist")
+    private String isBackupexist;
     @SerializedName("ClientContactNumber")
     private String strclientcontctno;
     @SerializedName("VendorID")
@@ -157,7 +157,7 @@ public class VehicalBean implements Serializable {
     private String strCreatedDate;
     @SerializedName("BalanceAmount")
     private String strBalanceAmount;
-    private int isChecked =0;
+    private int isChecked = 0;
 
     public String getStrCreatedDate() {
         return strCreatedDate;
@@ -253,6 +253,7 @@ public class VehicalBean implements Serializable {
     public String getStrVehicleSpeed() {
         return this.strVehicleSpeed;
     }
+
     public void setStrVehicleSpeed(String strVehicleSpeed) {
         this.strVehicleSpeed = strVehicleSpeed;
     }
@@ -705,18 +706,45 @@ public class VehicalBean implements Serializable {
         this.strendodometer = strendodometer;
     }
 
-    public String getStrdeparture_time() {return strdeparture_time;}
-    public void setStrdeparture_time(String strdeparture_time) {this.strdeparture_time = strdeparture_time;}
+    public String getStrdeparture_time() {
+        return strdeparture_time;
+    }
 
-    public String getETA() {return strETA;}
-    public void setETA(String strETA) {this.strETA = strETA;}
+    public void setStrdeparture_time(String strdeparture_time) {
+        this.strdeparture_time = strdeparture_time;
+    }
 
-    public String getPaidAmount() {return strPaidAmount;}
-    public void setPaidAmount(String strPaidAmount) {this.strPaidAmount= strPaidAmount;}
-    public String getAllowedAmount() {return strAllowedAmount;}
-    public void setAllowedAmount(String strAllowedAmount) {this.strAllowedAmount = strAllowedAmount;}
-    public String getBalanceAmount() {return strBalanceAmount;}
-    public void setBalanceAmount(String strBalanceAmount) {this.strBalanceAmount= strBalanceAmount;}
+    public String getETA() {
+        return strETA;
+    }
+
+    public void setETA(String strETA) {
+        this.strETA = strETA;
+    }
+
+    public String getPaidAmount() {
+        return strPaidAmount;
+    }
+
+    public void setPaidAmount(String strPaidAmount) {
+        this.strPaidAmount = strPaidAmount;
+    }
+
+    public String getAllowedAmount() {
+        return strAllowedAmount;
+    }
+
+    public void setAllowedAmount(String strAllowedAmount) {
+        this.strAllowedAmount = strAllowedAmount;
+    }
+
+    public String getBalanceAmount() {
+        return strBalanceAmount;
+    }
+
+    public void setBalanceAmount(String strBalanceAmount) {
+        this.strBalanceAmount = strBalanceAmount;
+    }
 
     public String getStrColorB() {
         return strColorB;
