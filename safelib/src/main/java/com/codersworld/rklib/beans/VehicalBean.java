@@ -16,6 +16,8 @@ public class VehicalBean implements Serializable {
     String strColorT;
     @SerializedName("status")
     private String strstatus;
+    @SerializedName("isBackupexist ")
+    private String isBackupexist ;
     @SerializedName("ClientContactNumber")
     private String strclientcontctno;
     @SerializedName("VendorID")
@@ -166,6 +168,14 @@ public class VehicalBean implements Serializable {
     }
 
     public VehicalBean() {
+    }
+
+    public String getIsBackupexist() {
+        return isBackupexist;
+    }
+
+    public void setIsBackupexist(String isBackupexist) {
+        this.isBackupexist = isBackupexist;
     }
 
     public int getId() {
