@@ -10,6 +10,8 @@ public class LoginBean implements Serializable {
     private String strreturnmessage;
     @SerializedName("uid")
     private String struid;
+   @SerializedName("isbackupuser")
+    private String isbackupuser;
     @SerializedName("val1")
     private String strval1;
     @SerializedName("gcmstatus")
@@ -44,6 +46,14 @@ public class LoginBean implements Serializable {
 
     @SerializedName("MainContactId")
     private String MainContactId;
+
+    public String getIsbackupuser() {
+        return isbackupuser;
+    }
+
+    public void setIsbackupuser(String isbackupuser) {
+        this.isbackupuser = isbackupuser;
+    }
 
     public String getMainContactId() {
         return MainContactId;
