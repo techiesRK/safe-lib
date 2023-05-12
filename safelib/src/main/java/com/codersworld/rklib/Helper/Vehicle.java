@@ -1,5 +1,14 @@
 package com.codersworld.rklib.Helper;
-public class Vehicle {
+
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
+public class Vehicle implements Serializable {
+    @SerializedName("wifilockdeviceid")
+    String wifilockdeviceid;
+    @SerializedName("wifilockdevicecode")
+    String wifilockdevicecode;
     private String mVehicleNumber;
     private String mDeviceId;
     private int mId;
@@ -9,6 +18,22 @@ public class Vehicle {
     private String lockId;
     private String deviceCode;
     private String lockCode;
+
+    public String getWifilockdeviceid() {
+        return wifilockdeviceid;
+    }
+
+    public void setWifilockdeviceid(String wifilockdeviceid) {
+        this.wifilockdeviceid = wifilockdeviceid;
+    }
+
+    public String getWifilockdevicecode() {
+        return wifilockdevicecode;
+    }
+
+    public void setWifilockdevicecode(String wifilockdevicecode) {
+        this.wifilockdevicecode = wifilockdevicecode;
+    }
 
     public String getLockId() {
         return lockId;
