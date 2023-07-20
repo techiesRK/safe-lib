@@ -47,6 +47,39 @@ public class LoginBean implements Serializable {
     @SerializedName("MainContactId")
     private String MainContactId;
 
+    @SerializedName("CurrentBalancelastest")
+    private String CurrentBalancelastest;
+
+    @SerializedName("Nocheckdate")
+    private String Nocheckdate;
+
+    @SerializedName("paymentscroll")
+    private String paymentscroll;
+
+    public String getCurrentBalancelastest() {
+        return CurrentBalancelastest;
+    }
+
+    public void setCurrentBalancelastest(String currentBalancelastest) {
+        CurrentBalancelastest = currentBalancelastest;
+    }
+
+    public String getNocheckdate() {
+        return Nocheckdate;
+    }
+
+    public void setNocheckdate(String nocheckdate) {
+        Nocheckdate = nocheckdate;
+    }
+
+    public String getPaymentscroll() {
+        return paymentscroll;
+    }
+
+    public void setPaymentscroll(String paymentscroll) {
+        this.paymentscroll = paymentscroll;
+    }
+
     public String getIsbackupuser() {
         return isbackupuser;
     }
