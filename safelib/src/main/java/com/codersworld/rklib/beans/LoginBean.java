@@ -56,6 +56,17 @@ public class LoginBean implements Serializable {
     @SerializedName("paymentscroll")
     private String paymentscroll;
 
+    @SerializedName("paymentmessage")
+    private String paymentmessage;
+
+    public String getPaymentmessage() {
+        return paymentmessage;
+    }
+
+    public void setPaymentmessage(String paymentmessage) {
+        this.paymentmessage = paymentmessage;
+    }
+
     public String getCurrentBalancelastest() {
         return CurrentBalancelastest;
     }
