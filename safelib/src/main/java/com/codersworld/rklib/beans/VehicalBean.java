@@ -1,9 +1,5 @@
 package com.codersworld.rklib.beans;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.widget.TextView;
-
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;

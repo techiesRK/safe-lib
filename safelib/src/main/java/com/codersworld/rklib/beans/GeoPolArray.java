@@ -2,8 +2,6 @@ package com.codersworld.rklib.beans;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-
 public class GeoPolArray {
     @SerializedName("ObjType")
     private String strobjtyp;

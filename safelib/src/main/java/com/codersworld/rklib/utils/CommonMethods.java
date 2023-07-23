@@ -15,8 +15,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.text.Html;
+import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.text.style.StrikethroughSpan;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -27,17 +31,22 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.core.util.Pair;
 import androidx.fragment.app.FragmentManager;
- import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.codersworld.rklib.R;
+import com.codersworld.rklib.fancydialog.FancyAlertDialog;
 import com.google.android.material.datepicker.CalendarConstraints;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.shashank.sony.fancytoastlib.FancyToast;
+
 import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -66,7 +75,9 @@ public class CommonMethods {
     public CommonMethods(Activity ctx) {
         mContext = (Context) ctx;
     }
-
+    public static void errorDialog(Context mContext, String msg, String strTitle, String positiveBtnText) {
+        FancyAlertDialog.showErrorDiloag(mContext, msg, strTitle, positiveBtnText);
+    }
     public static void initSwipeLayout(Context mContext, SwipeRefreshLayout mView, SwipeRefreshLayout.OnRefreshListener mActivity) {
         mView.setOnRefreshListener(mActivity);
         mView.setColorSchemeResources(R.color.colorAccent);
@@ -337,7 +348,7 @@ public class CommonMethods {
     }
     public static int[] currentTime() {
         int arr[] = {0, 0};
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             OffsetTime offset = OffsetTime.now();
             arr[0] = offset.getHour();
             arr[1] = offset.getMinute();
@@ -543,5 +554,37 @@ public class CommonMethods {
         return response;
     }
 
+    public static void setClickableHighLightedText(TextView tv, String textToHighlight, View.OnClickListener onClickListener) {
+        String tvt = tv.getText().toString();
+        int ofe = tvt.indexOf(textToHighlight, 0);
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(View textView) {
+                if (onClickListener != null) onClickListener.onClick(textView);
+            }
+
+            @Override
+            public void updateDrawState(TextPaint ds) {
+                super.updateDrawState(ds);
+                try{
+                    ds.setColor(ContextCompat.getColor(tv.getContext(), R.color.colorAccent));
+                }catch (Exception e){
+                    ds.setColor(tv.getContext().getResources().getColor(R.color.colorAccent));
+                }
+                ds.setUnderlineText(true);
+            }
+        };
+        SpannableString wordToSpan = new SpannableString(tv.getText());
+        for (int ofs = 0; ofs < tvt.length() && ofe != -1; ofs = ofe + 1) {
+            ofe = tvt.indexOf(textToHighlight, ofs);
+            if (ofe == -1)
+                break;
+            else {
+                wordToSpan.setSpan(clickableSpan, ofe, ofe + textToHighlight.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                tv.setText(wordToSpan, TextView.BufferType.SPANNABLE);
+                tv.setMovementMethod(LinkMovementMethod.getInstance());
+            }
+        }
+    }
 
 }

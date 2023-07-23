@@ -9,8 +9,8 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 
-import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import java.util.ArrayList;
 
