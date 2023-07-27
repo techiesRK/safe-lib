@@ -49,7 +49,7 @@ public class LoginBean implements Serializable {
 
     @SerializedName("CurrentBalancelastest")
     private String CurrentBalancelastest;
-  @SerializedName("welcomename ")
+  @SerializedName("welcomename")
     private String welcomename ;
 
     @SerializedName("Nocheckdate")
