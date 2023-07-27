@@ -49,6 +49,8 @@ public class LoginBean implements Serializable {
 
     @SerializedName("CurrentBalancelastest")
     private String CurrentBalancelastest;
+  @SerializedName("welcomename ")
+    private String welcomename ;
 
     @SerializedName("Nocheckdate")
     private String Nocheckdate;
@@ -58,6 +60,14 @@ public class LoginBean implements Serializable {
 
     @SerializedName("paymentmessage")
     private String paymentmessage;
+
+    public String getWelcomename() {
+        return welcomename;
+    }
+
+    public void setWelcomename(String welcomename) {
+        this.welcomename = welcomename;
+    }
 
     public String getPaymentmessage() {
         return paymentmessage;
