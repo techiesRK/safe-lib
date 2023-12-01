@@ -60,6 +60,16 @@ public class LoginBean implements Serializable {
 
     @SerializedName("paymentmessage")
     private String paymentmessage;
+    @SerializedName("issendnotification ")
+    private String issendnotification ;
+
+    public String getIssendnotification() {
+        return issendnotification;
+    }
+
+    public void setIssendnotification(String issendnotification) {
+        this.issendnotification = issendnotification;
+    }
 
     public String getWelcomename() {
         return welcomename;
