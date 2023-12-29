@@ -62,6 +62,36 @@ public class LoginBean implements Serializable {
     private String paymentmessage;
     @SerializedName("issendnotification ")
     private String issendnotification ;
+  @SerializedName("ispannoverified ")
+    private String ispannoverified ;
+ @SerializedName("isadhverified ")
+    private String isadhverified ;
+ @SerializedName("isbankverified ")
+    private String isbankverified ;
+
+    public String getIspannoverified() {
+        return ispannoverified;
+    }
+
+    public void setIspannoverified(String ispannoverified) {
+        this.ispannoverified = ispannoverified;
+    }
+
+    public String getIsadhverified() {
+        return isadhverified;
+    }
+
+    public void setIsadhverified(String isadhverified) {
+        this.isadhverified = isadhverified;
+    }
+
+    public String getIsbankverified() {
+        return isbankverified;
+    }
+
+    public void setIsbankverified(String isbankverified) {
+        this.isbankverified = isbankverified;
+    }
 
     public String getIssendnotification() {
         return issendnotification;
