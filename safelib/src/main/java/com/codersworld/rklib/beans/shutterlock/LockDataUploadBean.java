@@ -7,16 +7,16 @@ public class LockDataUploadBean implements Serializable {
      int deleteDate;
      int electricQuantity;
      int keyId;
-     int operateDate;
+     String operateDate;
      int recordId;
      int recordType;
-     int password;
+    String password;
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -56,11 +56,11 @@ public class LockDataUploadBean implements Serializable {
         this.keyId = keyId;
     }
 
-    public int getOperateDate() {
+    public String getOperateDate() {
         return operateDate;
     }
 
-    public void setOperateDate(int operateDate) {
+    public void setOperateDate(String operateDate) {
         this.operateDate = operateDate;
     }
 
