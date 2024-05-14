@@ -12,6 +12,10 @@ public class VehicalBean implements Serializable {
     String strColorT;
     @SerializedName("status")
     private String strstatus;
+    @SerializedName("DeviceType")
+    private String DeviceType;
+    @SerializedName("btlockid")
+    private String btlockid;
     @SerializedName("isBackupexist")
     private String isBackupexist;
     @SerializedName("ClientContactNumber")
@@ -154,6 +158,22 @@ public class VehicalBean implements Serializable {
     @SerializedName("BalanceAmount")
     private String strBalanceAmount;
     private int isChecked = 0;
+
+    public String getDeviceType() {
+        return DeviceType;
+    }
+
+    public void setDeviceType(String deviceType) {
+        DeviceType = deviceType;
+    }
+
+    public String getBtlockid() {
+        return btlockid;
+    }
+
+    public void setBtlockid(String btlockid) {
+        this.btlockid = btlockid;
+    }
 
     public String getStrCreatedDate() {
         return strCreatedDate;
