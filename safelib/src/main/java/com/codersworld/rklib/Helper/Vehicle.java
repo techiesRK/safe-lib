@@ -9,6 +9,10 @@ public class Vehicle implements Serializable {
     String wifilockdeviceid;
     @SerializedName("wifilockdevicecode")
     String wifilockdevicecode;
+    @SerializedName("DeviceType")
+    private String DeviceType;
+    @SerializedName("btlockid")
+    private String btlockid;
     private String mVehicleNumber;
     private String mDeviceId;
     private int mId;
@@ -18,6 +22,22 @@ public class Vehicle implements Serializable {
     private String lockId;
     private String deviceCode;
     private String lockCode;
+
+    public String getDeviceType() {
+        return DeviceType;
+    }
+
+    public void setDeviceType(String deviceType) {
+        DeviceType = deviceType;
+    }
+
+    public String getBtlockid() {
+        return btlockid;
+    }
+
+    public void setBtlockid(String btlockid) {
+        this.btlockid = btlockid;
+    }
 
     public String getWifilockdeviceid() {
         return wifilockdeviceid;
