@@ -72,6 +72,13 @@ public class Preferencehelper {
     public void setMainContactId(String string) {
         prefs.edit().putString("MainContactId", string).commit();
     }
+    public String getIsOfficeUser () {
+        return prefs.getString("isOfficeUser ", "0");
+    }
+
+    public void setIsOfficeUser(String string) {
+        prefs.edit().putString("isOfficeUser ", string).commit();
+    }
 
     public String getPrefsCurrency() {
         return prefs.getString(PREFS_CURRENCY, "0");
