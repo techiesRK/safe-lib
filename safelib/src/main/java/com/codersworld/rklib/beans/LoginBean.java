@@ -8,9 +8,11 @@ public class LoginBean implements Serializable {
 
     @SerializedName("returnmessage")
     private String strreturnmessage;
+    @SerializedName("isofficeuser")
+    private String isofficeuser;
     @SerializedName("uid")
     private String struid;
-   @SerializedName("isbackupuser")
+    @SerializedName("isbackupuser")
     private String isbackupuser;
     @SerializedName("val1")
     private String strval1;
@@ -49,8 +51,8 @@ public class LoginBean implements Serializable {
 
     @SerializedName("CurrentBalancelastest")
     private String CurrentBalancelastest;
-  @SerializedName("welcomename")
-    private String welcomename ;
+    @SerializedName("welcomename")
+    private String welcomename;
 
     @SerializedName("Nocheckdate")
     private String Nocheckdate;
@@ -61,13 +63,21 @@ public class LoginBean implements Serializable {
     @SerializedName("paymentmessage")
     private String paymentmessage;
     @SerializedName("issendnotification ")
-    private String issendnotification ;
-  @SerializedName("ispannoverified ")
-    private String ispannoverified ;
- @SerializedName("isadhverified ")
-    private String isadhverified ;
- @SerializedName("isbankverified ")
-    private String isbankverified ;
+    private String issendnotification;
+    @SerializedName("ispannoverified ")
+    private String ispannoverified;
+    @SerializedName("isadhverified ")
+    private String isadhverified;
+    @SerializedName("isbankverified ")
+    private String isbankverified;
+
+    public String getIsofficeuser() {
+        return isofficeuser;
+    }
+
+    public void setIsofficeuser(String isofficeuser) {
+        this.isofficeuser = isofficeuser;
+    }
 
     public String getIspannoverified() {
         return ispannoverified;
