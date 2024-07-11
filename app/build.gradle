@@ -68,6 +68,6 @@ dependencies {
     implementation project(path: ':safelib')
     //implementation 'com.github.RkTechies:safe-lib:1.0.1'
 }
-apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 //apply plugin: 'kotlin-android-extensions'
