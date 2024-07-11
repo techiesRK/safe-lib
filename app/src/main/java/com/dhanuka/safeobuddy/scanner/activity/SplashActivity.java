@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 /*import com.codersworld.rklib.scanner.ScanActivity;
 import com.codersworld.rklib.utils.AppUrls;
 import com.codersworld.rklib.utils.CommonMethods;*/
+import com.codersworld.rklib.utils.AppUrls;
+import com.codersworld.rklib.utils.CommonMethods;
 import com.dhanuka.safeobuddy.R;
 
 
@@ -24,7 +26,7 @@ TextView txtResult;
         setContentView(R.layout.activity_splash);
         txtResult = findViewById(R.id.txtResult);
         //startActivityForResult(new Intent(this, ScanActivity.class).putExtra("open_scanner", true), 102);
-        // CommonMethods.successToast(this, AppUrls.GET_UOM_ITEM);
+         //CommonMethods.successToast(this, AppUrls.GET_UOM_ITEM);
     }
 
     public void onScan(View mView) {
