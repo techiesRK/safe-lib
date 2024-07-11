@@ -10,6 +10,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.zip.GZIPInputStream;
+import android.net.wifi.WifiConfiguration;
 
 public class ApiCall {
     static String a = "http";
@@ -26,6 +27,7 @@ public class ApiCall {
 
     public ApiCall() {
     }
+
 
     public static WifiConfiguration connectWifi(String ssid, String password) {
         WifiConfiguration wc = new WifiConfiguration();
