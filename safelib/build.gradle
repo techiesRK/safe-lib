@@ -4,7 +4,10 @@ plugins {
     //id 'kotlin-android'
     id 'kotlin-parcelize'
 //    id 'kotlin-android-extensions'
+    id 'maven-publish' // Ensure maven-publish plugin is applied
 }
+
+
 android {
     compileSdk 34
     namespace 'com.codersworld.rklib'
@@ -24,7 +27,7 @@ android {
         }
     }
      viewBinding {
-        enabled = true// true
+        enabled = true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -52,3 +55,22 @@ dependencies {
 //    implementation("io.github.g00fy2.quickie:quickie-bundled:1.5.2")
 
 }//this is the library project to convert into .jar file as lib for main project
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.codersworld.rklib'
+            artifactId = 'SafeLibDemo'
+            version = '1.0.37'
+        }
+    }
+
+    repositories {
+        maven {
+            url "$buildDir/repo"
+        }
+    }
+}
+
+group = 'com.github.techiesRK'
+version = '1.0.37'
