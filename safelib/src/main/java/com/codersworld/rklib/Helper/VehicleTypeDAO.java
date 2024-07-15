@@ -1,5 +1,6 @@
 package com.codersworld.rklib.Helper;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -80,6 +81,7 @@ public class VehicleTypeDAO {
         return dataList;
     }
 
+    @SuppressLint("Range")
     protected DbVehicletype cursorToData(Cursor cursor) {
         DbVehicletype work = new DbVehicletype();
         //work.set(cursor.getInt(cursor.getColumnIndex(COLUMN_ID)));

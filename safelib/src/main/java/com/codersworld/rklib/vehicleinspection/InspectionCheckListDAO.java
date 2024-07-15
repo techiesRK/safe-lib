@@ -1,5 +1,6 @@
 package com.codersworld.rklib.vehicleinspection;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -214,6 +215,7 @@ public class InspectionCheckListDAO {
         return dataList;
     }
 
+    @SuppressLint("Range")
     protected dbinspectionchecklistmodel cursorToData(Cursor cursor) {
         dbinspectionchecklistmodel model = new dbinspectionchecklistmodel();
         model.setmCheckListTemplateID(cursor.getString(cursor.getColumnIndex(COLUMN_CheckListTemplateID)));

@@ -5,8 +5,10 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatTextView;
 
-public class SBTextViewRegular extends TextView {
+
+public class SBTextViewRegular extends AppCompatTextView {
     Context ctx;
 
     public SBTextViewRegular(Context context, AttributeSet attrs) {

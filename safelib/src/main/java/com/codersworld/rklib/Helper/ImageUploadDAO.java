@@ -1,6 +1,7 @@
 package com.codersworld.rklib.Helper;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -281,6 +282,7 @@ public class ImageUploadDAO {
         return cursor.getCount();
     }
 
+    @SuppressLint("Range")
     public int getlatesttypeidforupdate(String id) {
 
         String[] bindArgs = {
@@ -307,6 +309,7 @@ public class ImageUploadDAO {
     }
 
 
+    @SuppressLint("Range")
     public int getlatesttypeidforupdate1(String id) {
 
 
@@ -446,6 +449,7 @@ public class ImageUploadDAO {
         return dataList;
     }
 
+    @SuppressLint("Range")
     protected DBImageUpload cursorToData(Cursor cursor) {
         DBImageUpload model = new DBImageUpload();
         model.setmId(cursor.getInt(cursor.getColumnIndex(COLUMN_KEY_ID)));
