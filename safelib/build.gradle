@@ -56,6 +56,7 @@ dependencies {
 
 }//this is the library project to convert into .jar file as lib for main project
 
+/*
 publishing {
     publications {
         release(MavenPublication) {
@@ -73,4 +74,4 @@ publishing {
 }
 
 group = 'com.github.techiesRK'
-version = '1.0.37'
+version = '1.0.37'*/
