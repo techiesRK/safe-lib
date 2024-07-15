@@ -4,9 +4,8 @@ plugins {
     //id 'kotlin-android'
     id 'kotlin-parcelize'
 //    id 'kotlin-android-extensions'
-    id 'maven-publish' // Ensure maven-publish plugin is applied
 }
-
+apply plugin: 'maven-publish'
 
 android {
     compileSdk 34
@@ -56,22 +55,52 @@ dependencies {
 
 }//this is the library project to convert into .jar file as lib for main project
 
-/*
+
+
+
+
+
+task sourceJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier.set("sources")
+}
+
 publishing {
     publications {
-        release(MavenPublication) {
-            groupId = 'com.codersworld.rklib'
-            artifactId = 'SafeLibDemo'
-            version = '1.0.37'
+        maven(MavenPublication) {
+            groupId "com.codersworld.rklib"
+            artifactId "safe-lib"
+            version "1.0.40"
+            artifact sourceJar
+            artifact "$buildDir/outputs/aar/safe-lib.aar"
+
+            pom {
+                withXml {
+                    def dependenciesNode = asNode().appendNode('dependencies')
+
+                    project.configurations.implementation.allDependencies.each {
+                        if (it.group != null || it.name != null || it.version != null || it.name == "unspecified") return
+
+                        def dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', it.group)
+                        dependencyNode.appendNode('artifactId', it.name)
+                        dependencyNode.appendNode('version', it.version)
+                    }
+                }
+            }
         }
     }
-
     repositories {
         maven {
-            url "$buildDir/repo"
+            def propsFile = rootProject.file('github.properties')
+            def props = new Properties()
+            props.load(new FileInputStream(propsFile))
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/techiesRK/safe-lib")
+            credentials {
+                username props['username']
+                password props['token']
+            }
         }
     }
 }
-
-group = 'com.github.techiesRK'
-version = '1.0.37'*/
