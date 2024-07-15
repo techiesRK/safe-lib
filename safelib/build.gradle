@@ -90,7 +90,7 @@ publishing {
             }
         }
     }
-    repositories {
+  /*  repositories {
         maven {
             def propsFile = rootProject.file('github.properties')
             def props = new Properties()
@@ -102,5 +102,5 @@ publishing {
                 password props['token']
             }
         }
-    }
+    }*/
 }
