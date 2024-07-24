@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.library'
     //id 'org.jetbrains.kotlin.android'
-    //id 'kotlin-android'
+    id 'maven-publish'
     id 'kotlin-parcelize'
 //    id 'kotlin-android-extensions'
 }
@@ -63,6 +63,16 @@ dependencies {
 task sourceJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     archiveClassifier.set("sources")
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
 
 /*publishing {
