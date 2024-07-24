@@ -1,13 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+
     namespace 'com.dhanuka.safeobuddy'
-
     compileSdk 34
-
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
     defaultConfig {
-        applicationId "com.dhanuka.safeobuddy"
-        minSdkVersion 23 //change back to 19
+        applicationId "com.codersworld.qr.scanner"
+        minSdk 23 //change back to 19
         targetSdk 34
         versionCode 1
         versionName "1.0.1"
@@ -34,13 +37,10 @@ android {
     viewBinding {
         enabled = true
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-/*    dataBinding {
+
+    dataBinding {
         enabled = true
-    }*/
+    }
 
     packagingOptions {
         exclude 'AndroidManifest.xml'
@@ -68,6 +68,6 @@ dependencies {
     implementation project(path: ':safelib')
     //implementation 'com.github.RkTechies:safe-lib:1.0.1'
 }
-//apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 //apply plugin: 'kotlin-android-extensions'

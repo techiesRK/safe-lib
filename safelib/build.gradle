@@ -1,19 +1,17 @@
 plugins {
     id 'com.android.library'
-    //id 'org.jetbrains.kotlin.android'
-    id 'maven-publish'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
     id 'kotlin-parcelize'
-//    id 'kotlin-android-extensions'
+    //id 'kotlin-android-extensions'
 }
-//apply plugin: 'maven-publish'
-
 android {
-    compileSdk 34
     namespace 'com.codersworld.rklib'
+    compileSdk 34
 
     defaultConfig {
-         minSdk 23
-        targetSdk 34
+        minSdk 23
+        targetSdkVersion  34
         vectorDrawables.useSupportLibrary = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -25,20 +23,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-     viewBinding {
-        enabled = true
-    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-/*    kotlinOptions {
-        jvmTarget = "1.8"
-    }*/
+/*
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+*/
 }
 
 dependencies {
-    implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.6'
+    implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.8'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation 'androidx.appcompat:appcompat:1.7.0'
@@ -54,64 +51,3 @@ dependencies {
 //    implementation("io.github.g00fy2.quickie:quickie-bundled:1.5.2")
 
 }//this is the library project to convert into .jar file as lib for main project
-
-
-
-
-
-
-task sourceJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    archiveClassifier.set("sources")
-}
-
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            afterEvaluate {
-                from(components["release"])
-            }
-        }
-    }
-}
-
-/*publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId "com.codersworld.rklib"
-            artifactId "safe-lib"
-            version "1.0.40"
-            artifact sourceJar
-            artifact "$buildDir/outputs/aar/safe-lib.aar"
-
-            pom {
-                withXml {
-                    def dependenciesNode = asNode().appendNode('dependencies')
-
-                    project.configurations.implementation.allDependencies.each {
-                        if (it.group != null || it.name != null || it.version != null || it.name == "unspecified") return
-
-                        def dependencyNode = dependenciesNode.appendNode('dependency')
-                        dependencyNode.appendNode('groupId', it.group)
-                        dependencyNode.appendNode('artifactId', it.name)
-                        dependencyNode.appendNode('version', it.version)
-                    }
-                }
-            }
-        }
-    }
-
-}*/
-/*  repositories {
-      maven {
-          def propsFile = rootProject.file('github.properties')
-          def props = new Properties()
-          props.load(new FileInputStream(propsFile))
-          name = "GitHubPackages"
-          url = uri("https://maven.pkg.github.com/techiesRK/safe-lib")
-          credentials {
-              username props['username']
-              password props['token']
-          }
-      }
-  }*/
