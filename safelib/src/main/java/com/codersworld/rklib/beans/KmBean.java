@@ -47,6 +47,186 @@ public class KmBean implements Serializable {
     private String strkmVal4;
 
 
+    @SerializedName("PhoneNumber")
+    private String PhoneNumber;
+    @SerializedName("VehicleType")
+    private String VehicleType;
+    @SerializedName("PowerCutTime")
+    private String PowerCutTime;
+    @SerializedName("VoltageLevel")
+    private String VoltageLevel;
+    @SerializedName("GSMSignal")
+    private String GSMSignal;
+    @SerializedName("LockType")
+    private String LockType;
+    @SerializedName("GateOpenTime")
+    private String GateOpenTime;
+    @SerializedName("GateClosedTime")
+    private String GateClosedTime;
+    @SerializedName("LockOpenTime")
+    private String LockOpenTime;
+    @SerializedName("LockClosedTime")
+    private String LockClosedTime;
+    @SerializedName("InstallDate")
+    private String InstallDate;
+    @SerializedName("Origin")
+    private String Origin;
+    @SerializedName("VendorName")
+    private String VendorName;
+    @SerializedName("CompanyName")
+    private String CompanyName;
+    @SerializedName("NFCLockNumber")
+    private String NFCLockNumber;
+    @SerializedName("PadLockNumber")
+    private String PadLockNumber;
+    @SerializedName("PhoneType")
+    private String PhoneType;
+    @SerializedName("LockStatus")
+    private String LockStatus;
+
+    public String getPhoneNumber() {
+        return PhoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        PhoneNumber = phoneNumber;
+    }
+
+    public String getVehicleType() {
+        return VehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        VehicleType = vehicleType;
+    }
+
+    public String getPowerCutTime() {
+        return PowerCutTime;
+    }
+
+    public void setPowerCutTime(String powerCutTime) {
+        PowerCutTime = powerCutTime;
+    }
+
+    public String getVoltageLevel() {
+        return VoltageLevel;
+    }
+
+    public void setVoltageLevel(String voltageLevel) {
+        VoltageLevel = voltageLevel;
+    }
+
+    public String getGSMSignal() {
+        return GSMSignal;
+    }
+
+    public void setGSMSignal(String GSMSignal) {
+        this.GSMSignal = GSMSignal;
+    }
+
+    public String getLockType() {
+        return LockType;
+    }
+
+    public void setLockType(String lockType) {
+        LockType = lockType;
+    }
+
+    public String getGateOpenTime() {
+        return GateOpenTime;
+    }
+
+    public void setGateOpenTime(String gateOpenTime) {
+        GateOpenTime = gateOpenTime;
+    }
+
+    public String getGateClosedTime() {
+        return GateClosedTime;
+    }
+
+    public void setGateClosedTime(String gateClosedTime) {
+        GateClosedTime = gateClosedTime;
+    }
+
+    public String getLockOpenTime() {
+        return LockOpenTime;
+    }
+
+    public void setLockOpenTime(String lockOpenTime) {
+        LockOpenTime = lockOpenTime;
+    }
+
+    public String getLockClosedTime() {
+        return LockClosedTime;
+    }
+
+    public void setLockClosedTime(String lockClosedTime) {
+        LockClosedTime = lockClosedTime;
+    }
+
+    public String getInstallDate() {
+        return InstallDate;
+    }
+
+    public void setInstallDate(String installDate) {
+        InstallDate = installDate;
+    }
+
+    public String getOrigin() {
+        return Origin;
+    }
+
+    public void setOrigin(String origin) {
+        Origin = origin;
+    }
+
+    public String getVendorName() {
+        return VendorName;
+    }
+
+    public void setVendorName(String vendorName) {
+        VendorName = vendorName;
+    }
+
+    public String getCompanyName() {
+        return CompanyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        CompanyName = companyName;
+    }
+
+    public String getNFCLockNumber() {
+        return NFCLockNumber;
+    }
+
+    public void setNFCLockNumber(String NFCLockNumber) {
+        this.NFCLockNumber = NFCLockNumber;
+    }
+
+    public String getPadLockNumber() {
+        return PadLockNumber;
+    }
+
+    public void setPadLockNumber(String padLockNumber) {
+        PadLockNumber = padLockNumber;
+    }
+
+    public String getPhoneType() {
+        return PhoneType;
+    }
+
+    public void setPhoneType(String phoneType) {
+        PhoneType = phoneType;
+    }
+
+    public String getLockStatus() {
+        return LockStatus;
+    }
+
+    public void setLockStatus(String lockStatus) {
+        LockStatus = lockStatus;
+    }
 
     public String getStrkmlat() {
         return strkmlat;
